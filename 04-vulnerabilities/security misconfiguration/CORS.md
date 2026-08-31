@@ -2,7 +2,8 @@ resources:
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
 
 youtube:
-[What is CORS](https://youtu.be/WWnR4xptSRk)-[Portswigger CORS Lab 1](https://youtu.be/RKe6r63OxXw)
+- [What is CORS](https://youtu.be/WWnR4xptSRk)
+- [Portswigger CORS Lab 1](https://youtu.be/RKe6r63OxXw)
 
 ## What Is CORS?
 
