@@ -4,6 +4,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
 youtube:
 [What is CORS](https://youtu.be/WWnR4xptSRk)
 
+lab: [portswigger cors](https://youtu.be/RKe6r63OxXw)
 ## What Is CORS?
 
 **CORS** stands for **Cross-Origin Resource Sharing**. It is a browser security mechanism that allows a website to request resources from a different **origin** when the destination server explicitly permits it.
@@ -13,6 +14,8 @@ It is a **browser feature**.
 **CORS itself is not a vulnerability.** CORS (Cross-Origin Resource Sharing) is a **browser security mechanism** that controls which origins are allowed to access resources from another origin.
 
 The vulnerability occurs when **CORS is misconfigured**.
+
+In Same Origin Policy (SOP) the request if being received by the browser but it blocks the response if there's a mismatch in the origin i.e. `Access-Control-Allow-Origin` 
 
 For example:
 - Frontend: `https://shop.example`
@@ -94,14 +97,14 @@ If the server does not allow that origin, the browser blocks the JavaScript from
 
 ## Important CORS Headers
 
-|Header|Purpose|
-|---|---|
-|`Origin`|Identifies the website making the cross-origin request.|
-|`Access-Control-Allow-Origin`|Specifies which origin may read the response.|
-|`Access-Control-Allow-Methods`|Lists permitted methods such as `GET`, `POST`, or `DELETE`.|
-|`Access-Control-Allow-Headers`|Lists non-simple request headers the client may send.|
-|`Access-Control-Allow-Credentials`|Allows credentials such as cookies to be included.|
-|`Access-Control-Max-Age`|Tells the browser how long it may cache the preflight result.|
+| Header                             | Purpose                                                       |
+| ---------------------------------- | ------------------------------------------------------------- |
+| `Origin`                           | Identifies the website making the cross-origin request.       |
+| `Access-Control-Allow-Origin`      | Specifies which origin may read the response.                 |
+| `Access-Control-Allow-Methods`     | Lists permitted methods such as `GET`, `POST`, or `DELETE`.   |
+| `Access-Control-Allow-Headers`     | Lists non-simple request headers the client may send.         |
+| `Access-Control-Allow-Credentials` | Allows credentials such as cookies to be included.            |
+| `Access-Control-Max-Age`           | Tells the browser how long it may cache the preflight result. |
 
 Example:
 
