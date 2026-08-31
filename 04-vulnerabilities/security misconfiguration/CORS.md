@@ -247,3 +247,184 @@ It tells the browser which origin is allowed to access the response.
 CORS itself is not a vulnerability. It becomes a problem when the server gives permission to **untrusted origins**, especially for sensitive or authenticated data.
 
 A misconfigured CORS policy may allow an attacker-controlled website to make a browser request to a target application and read the response. If the victim is logged in, the response could contain private information. PortSwigger describes this risk as allowing a trusted or attacker-controlled domain to interact with the application in the logged-in user’s security context.
+
+## Common CORS misconfigurations
+
+### 1. Trusting every origin dynamically
+
+A dangerous implementation is:
+
+```
+Access-Control-Allow-Origin: [value received in Origin]
+```
+
+If the server receives:
+
+```
+Origin: https://attacker.example
+```
+
+and responds:
+
+```
+Access-Control-Allow-Origin: https://attacker.example
+Access-Control-Allow-Credentials: true
+```
+
+then the server has effectively trusted the attacker’s website. PortSwigger classifies trusting arbitrary origins as an overly permissive cross-domain policy.[[portswigger](https://portswigger.net/kb/issues/00200601_cross-origin-resource-sharing-arbitrary-origin-trusted)]
+
+A secure server should compare the origin against a fixed allowlist:
+
+```
+https://app.example.com
+https://admin.example.com
+```
+
+It should not automatically reflect every origin.
+
+### 2. Allowing credentials for an untrusted origin
+
+The following response is dangerous when used with sensitive data:
+
+```
+Access-Control-Allow-Origin: https://untrusted-site.example
+Access-Control-Allow-Credentials: true
+```
+
+`Access-Control-Allow-Credentials: true` tells the browser that credentials such as cookies may be used in the cross-origin request.
+
+This can allow an untrusted website to read authenticated responses if the server’s other controls are weak.[[zaproxy](https://www.zaproxy.org/docs/alerts/40040-3/)]
+
+### 3. Trusting all subdomains
+
+A policy such as this can create risk:
+
+```
+Allow all subdomains of example.com
+```
+
+This sounds safe, but if any subdomain is vulnerable, abandoned, user-controlled, or taken over, it may become a trusted origin. Trusting all subdomains increases the attack surface.[[portswigger](https://portswigger.net/kb/issues/00200603_cross-origin-resource-sharing-all-subdomains-trusted)]
+
+For example:
+
+```
+https://app.example.com       trusted
+https://old-test.example.com  vulnerable
+https://attacker.example.com  controlled by attacker
+```
+
+A better approach is to allow only the exact origins that need access.
+
+### 4. Using `null` carelessly
+
+Some requests can have:
+
+```
+Origin: null
+```
+
+If the server responds:
+
+```
+Access-Control-Allow-Origin: null
+Access-Control-Allow-Credentials: true
+```
+
+the policy may be unsafe, depending on the application and the data being exposed. `null` should not be trusted casually.
+
+### 5. Allowing overly broad methods and headers
+
+Example:
+
+```
+Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE
+Access-Control-Allow-Headers: *
+```
+
+This may give cross-origin applications more access than they actually need.
+
+The server should allow only the required methods and headers:
+
+```
+Access-Control-Allow-Methods: GET
+Access-Control-Allow-Headers: Content-Type
+```
+
+This is not a complete security boundary by itself, but reducing unnecessary permissions is safer.
+
+## Important wildcard detail
+
+This configuration is commonly described as dangerous:
+
+```
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+```
+
+However, modern browsers do **not** allow the wildcard `*` to be used for credentialed CORS requests. The browser blocks that combination.[[developer.mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)][[portswigger](https://portswigger.net/web-security/cors/access-control-allow-origin)]
+
+This configuration:
+
+```
+Access-Control-Allow-Origin: *
+```
+
+may be acceptable for genuinely public, non-sensitive resources. It becomes inappropriate when the response contains private data or when credentials are required.
+
+The more realistic dangerous pattern is usually:
+
+```
+Access-Control-Allow-Origin: [reflected attacker origin]
+Access-Control-Allow-Credentials: true
+```
+
+## CORS is not the same as authentication
+
+CORS does not decide whether a user is logged in. It only controls whether browser JavaScript from another origin can read a response.
+
+The server must still implement:
+
+- Authentication.
+- Authorization.
+- Session management.
+- CSRF protection.
+- Input validation.
+- Rate limiting.
+
+Also, CORS is mainly enforced by browsers. Tools such as Burp Suite, `curl`, or another server can send requests without being stopped by the browser’s CORS rules. Therefore, an API must never rely on CORS as its only access-control mechanism.
+
+## Secure CORS example
+
+If only one frontend needs access:
+
+```
+Access-Control-Allow-Origin: https://app.example.com
+Access-Control-Allow-Methods: GET, POST
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Credentials: true
+Vary: Origin
+```
+
+The server should:
+
+- Use an exact allowlist of trusted origins.
+- Allow credentials only when necessary.
+- Allow only required methods.
+- Allow only required headers.
+- Avoid trusting arbitrary origins.
+- Avoid trusting every subdomain.
+- Avoid exposing sensitive data through unnecessarily broad CORS rules.
+- Use `Vary: Origin` when responses differ based on the requesting origin.
+
+## Pentesting checklist
+
+When assessing CORS in an authorized lab or bug-bounty scope:
+
+1. Send a request containing an untrusted `Origin`.
+2. Check whether the response returns that origin in `Access-Control-Allow-Origin`.
+3. Check whether `Access-Control-Allow-Credentials: true` is present.
+4. Determine whether the response contains sensitive information.
+5. Test whether the policy trusts all subdomains or unusual origins.
+6. Check whether preflight requests allow unnecessary methods or headers.
+7. Confirm the behavior in a browser, because browser enforcement matters.
+8. Do not report CORS merely because the header exists; demonstrate that sensitive data can actually be read by an unauthorized origin.
