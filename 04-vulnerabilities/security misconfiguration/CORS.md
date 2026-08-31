@@ -4,7 +4,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
 youtube:
 - [What is CORS](https://youtu.be/WWnR4xptSRk)
 - [Portswigger CORS Lab 1](https://youtu.be/RKe6r63OxXw)
-
+- [Preflight Request](https://youtu.be/tcLW5d0KAYE)
+- [Rana Khalil](https://youtu.be/t5FBwq-kudw)
 ## What Is CORS?
 
 **CORS** stands for **Cross-Origin Resource Sharing**. It is a browser security mechanism that allows a website to request resources from a different **origin** when the destination server explicitly permits it.
@@ -16,6 +17,10 @@ It is a **browser feature**.
 The vulnerability occurs when **CORS is misconfigured**.
 
 In Same Origin Policy (SOP) the request if being received by the browser but it blocks the response if there's a mismatch in the origin i.e. `Access-Control-Allow-Origin` 
+
+SOP doesn't provide protection against CSRF, as SOP mainly prevents one origin from reading data from another origin. The request is always accepted by the browser but response is not given. In the case of CSRF the attacker doesn't need a response from the browser, he simply sends a payload that can change the users email id.
+
+SOP prevents scripts from reading cross-origin responses, but browsers can still send certain cross-origin requests. CSRF exploits this behavior to perform unauthorized actions using the victim's credentials
 
 For example:
 - Frontend: `https://shop.example`
