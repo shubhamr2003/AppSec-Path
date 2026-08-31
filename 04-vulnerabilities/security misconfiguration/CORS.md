@@ -8,6 +8,12 @@ youtube:
 
 **CORS** stands for **Cross-Origin Resource Sharing**. It is a browser security mechanism that allows a website to request resources from a different **origin** when the destination server explicitly permits it.
 
+It is a **browser feature**.
+
+**CORS itself is not a vulnerability.** CORS (Cross-Origin Resource Sharing) is a **browser security mechanism** that controls which origins are allowed to access resources from another origin.
+
+The vulnerability occurs when **CORS is misconfigured**.
+
 For example:
 - Frontend: `https://shop.example`
 - API: `https://api.example`
@@ -15,10 +21,7 @@ For example:
 These are different origins, but CORS can allow the frontend to communicate with the API.
 ## What Is an Origin?
 
-What is ORIGIN for a browser/server
-
 ORIGIN = scheme://host:port
-eg- https://example.com:443
 
 ```
 scheme://host:port
@@ -32,12 +35,12 @@ https://example.com:443
 
 Two URLs have different origins if their scheme, host, or port differs.
 
-|URL|Compared with `https://example.com`|
-|---|---|
-|`https://example.com/profile`|Same origin|
-|`http://example.com`|Different scheme|
-|`https://api.example.com`|Different host|
-|`https://example.com:8443`|Different port|
+| URL                           | Compared with `https://example.com`           |
+| ----------------------------- | --------------------------------------------- |
+| `https://example.com/profile` | Same origin, different path (path is allowed) |
+| `http://example.com`          | Different scheme                              |
+| `https://api.example.com`     | Different host                                |
+| `https://example.com:8443`    | Different port                                |
 
 Even `https://example.com` and `https://api.example.com` are different origins because their hostnames differ.
 
@@ -230,3 +233,9 @@ Access-Control-Allow-Origin
 ```
 
 It tells the browser which origin is allowed to access the response.
+
+## Why can CORS become a security misconfiguration?
+
+CORS itself is not a vulnerability. It becomes a problem when the server gives permission to **untrusted origins**, especially for sensitive or authenticated data.
+
+A misconfigured CORS policy may allow an attacker-controlled website to make a browser request to a target application and read the response. If the victim is logged in, the response could contain private information. PortSwigger describes this risk as allowing a trusted or attacker-controlled domain to interact with the application in the logged-in user’s security context.
