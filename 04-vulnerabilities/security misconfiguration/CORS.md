@@ -3,8 +3,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS
 
 youtube:
 [What is CORS](https://youtu.be/WWnR4xptSRk)
+[Portswigger CORS Lab 1](https://youtu.be/RKe6r63OxXw)
 
-lab: [portswigger cors](https://youtu.be/RKe6r63OxXw)
 ## What Is CORS?
 
 **CORS** stands for **Cross-Origin Resource Sharing**. It is a browser security mechanism that allows a website to request resources from a different **origin** when the destination server explicitly permits it.
