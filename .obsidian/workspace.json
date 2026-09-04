@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "33b6506561fe4350",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b4b05021bd34907",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c790fe9fc907734",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "05-portswigger/security misconfiguration/CORS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CORS"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c135b3af5dca07a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d484d05f672bcb05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ce3c6410c7acac96",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d148e74bdf3bff42",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "23572a8992d731b8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a045eef84cd5a238",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec150e9ed604a380",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "137bc96bfe7569b5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "05-portswigger/security misconfiguration/CORS.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "59ed999debc18cf2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "05-portswigger/security misconfiguration/CORS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "fb3763e4753562e0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7dfea1ae9565b5ae",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d0c28d13f0016d9e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "05-portswigger/security misconfiguration/CORS.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "8c790fe9fc907734",
+  "lastOpenFiles": [
+    "05-portswigger/security misconfiguration/Pasted image 20260904122624.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904122645.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904124348.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904121631.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904114827.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904114416.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904114014.png",
+    "05-portswigger/security misconfiguration/Pasted image 20260904113629.png",
+    "05-portswigger/security misconfiguration/CORS.md",
+    "05-portswigger/security misconfiguration/Pasted image 20260904113450.png"
+  ]
+}
