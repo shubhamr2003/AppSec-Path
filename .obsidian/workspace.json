@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-portswigger/security misconfiguration/CORS/Lab 3.md",
+                "file": "05-portswigger/access-control/IDOR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 3"
+              "title": "IDOR"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05-portswigger/security misconfiguration/CORS/Lab 3.md",
+                "file": "LAB-TRACKER.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05-portswigger/security misconfiguration/CORS/Lab 3.md",
+                "file": "LAB-TRACKER.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05-portswigger/security misconfiguration/CORS/Lab 3.md",
+                "file": "LAB-TRACKER.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -190,20 +190,30 @@
   },
   "active": "ce3c6410c7acac96",
   "lastOpenFiles": [
+    "05-portswigger/access-control/Pasted image 20260905233541.png",
+    "05-portswigger/access-control/Pasted image 20260905225832.png",
+    "05-portswigger/access-control/Pasted image 20260905225545.png",
+    "Pasted image 20260905225425.png",
+    "05-portswigger/access-control/Pasted image 20260905223342.png",
+    "05-portswigger/access-control/Pasted image 20260905223311.png",
+    "05-portswigger/access-control/Pasted image 20260905222335.png",
+    "05-portswigger/access-control/Pasted image 20260905222201.png",
+    "04-vulnerabilities/access control/IDOR.md",
+    "05-portswigger/access-control/IDOR.md",
+    "09-resources/youtube.md",
+    "LAB-TRACKER.md",
+    "Untitled.base",
+    "ROADMAP.md",
+    "README.md",
+    "METHODOLOGY.md",
+    "11-learning-log/Beginner's Guidemonthly-summary.md",
+    "05-portswigger/security misconfiguration/CORS/Lab 3.md",
     "05-portswigger/security misconfiguration/CORS/Lab 2.md",
     "05-portswigger/security misconfiguration/CORS/Lab 1.md",
     "05-portswigger/security misconfiguration/Pasted image 20260903221143.png",
-    "05-portswigger/security misconfiguration/CORS/Lab 3.md",
     "05-portswigger/security misconfiguration/CORS.md",
     "05-portswigger/security misconfiguration/CORS",
     "05-portswigger/security misconfiguration/Pasted image 20260904122624.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904122645.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904124348.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904121631.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904114827.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904114416.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904114014.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904113629.png",
-    "05-portswigger/security misconfiguration/Pasted image 20260904113450.png"
+    "05-portswigger/security misconfiguration/Pasted image 20260904122645.png"
   ]
 }
