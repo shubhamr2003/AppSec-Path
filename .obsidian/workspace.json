@@ -11,12 +11,14 @@
             "id": "8c790fe9fc907734",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "05-portswigger/access-control/Pasted image 20260906005045.png"
+                "file": "05-portswigger/access-control/IDOR.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260906005045"
+              "icon": "lucide-file",
+              "title": "IDOR"
             }
           }
         ]
@@ -186,10 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce3c6410c7acac96",
+  "active": "8c790fe9fc907734",
   "lastOpenFiles": [
-    "05-portswigger/access-control/IDOR.md",
     "05-portswigger/access-control/Pasted image 20260906005045.png",
+    "05-portswigger/access-control/IDOR.md",
     "05-portswigger/access-control/Pasted image 20260905233541.png",
     "05-portswigger/access-control/Pasted image 20260905225832.png",
     "05-portswigger/access-control/Pasted image 20260905225545.png",

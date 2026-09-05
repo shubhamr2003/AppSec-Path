@@ -1,7 +1,7 @@
 For ecommerce websites search for idor in porducts category
 In crm websitres search for idor in users mgmt
-https://youtu.be/lfFfJTEFK4Y
-https://youtu.be/gINAtzdccts
+- https://youtu.be/lfFfJTEFK4Y
+- https://youtu.be/gINAtzdccts
 
 Unprotected Functionality
 Lab 1:
