@@ -9,7 +9,7 @@ Lab 1:
 Got the admin panel directory just by adding `robots.txt` at the end of the home url
 ![robots](./images/robots-txt.png)
 
-![[admin-panel.png]]
+![admin panel](./images/admin-panel.png)
 
 Lab 2:
 In some cases, sensitive functionality is concealed by giving it a less predictable URL. This is an example of so-called "security by obscurity". However, hiding sensitive functionality does not provide effective access control because users might discover the obfuscated URL in a number of ways.
@@ -19,7 +19,7 @@ eg- https://insecure-website.com/administrator-panel-yb556
 Captured the home page request and sent it to repeater.
 And went through the response and found the unique admin url
 Pasted it in the browser and got the admin panel access
-![[unique-admin-path.png]]![[Pasted image 20260905223342.png]]
+![[unique-admin-path.png]]![unique admin](./images/unique-admin-panel.png)
 
 Parameter Based Access Control Methods
 Lab 3:
