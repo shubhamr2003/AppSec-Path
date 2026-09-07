@@ -1,0 +1,4 @@
+In some cases, sensitive functionality is concealed by giving it a less predictable URL. This is an example of so-called "security by obscurity". However, hiding sensitive functionality does not provide effective access control because users might discover the obfuscated URL in a number of ways.
+
+eg- https://insecure-website.com/administrator-panel-yb556
+

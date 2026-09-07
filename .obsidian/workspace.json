@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byCreatedTimeReverse",
                 "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,10 +188,20 @@
       "bases:Create new base": false
     }
   },
-  "active": "8c790fe9fc907734",
+  "active": "ce3c6410c7acac96",
   "lastOpenFiles": [
-    "05-portswigger/access-control/Pasted image 20260906005045.png",
+    "05-portswigger/access-control/Pasted image 20260907114821.png",
+    "05-portswigger/access-control/Pasted image 20260907112216.png",
+    "05-portswigger/access-control/Pasted image 20260907112011.png",
+    "04-vulnerabilities/access control/Lab 5 learning.md",
+    "04-vulnerabilities/access control/What are other HTTP headers used for URL overrides.md",
     "05-portswigger/access-control/IDOR.md",
+    "04-vulnerabilities/access control/Lab 4 learning.md",
+    "04-vulnerabilities/access control/Lab 3 learning.md",
+    "04-vulnerabilities/access control/Lab 1 Learning.md",
+    "04-vulnerabilities/access control/Lab 2 learning.md",
+    "04-vulnerabilities/access control/IDOR.md",
+    "05-portswigger/access-control/Pasted image 20260906005045.png",
     "05-portswigger/access-control/Pasted image 20260905233541.png",
     "05-portswigger/access-control/Pasted image 20260905225832.png",
     "05-portswigger/access-control/Pasted image 20260905225545.png",
@@ -199,8 +209,6 @@
     "05-portswigger/access-control/Pasted image 20260905223342.png",
     "05-portswigger/access-control/Pasted image 20260905223311.png",
     "05-portswigger/access-control/Pasted image 20260905222335.png",
-    "05-portswigger/access-control/Pasted image 20260905222201.png",
-    "04-vulnerabilities/access control/IDOR.md",
     "09-resources/youtube.md",
     "LAB-TRACKER.md",
     "Untitled.base",
@@ -211,7 +219,6 @@
     "05-portswigger/security misconfiguration/CORS/Lab 3.md",
     "05-portswigger/security misconfiguration/CORS/Lab 2.md",
     "05-portswigger/security misconfiguration/CORS/Lab 1.md",
-    "05-portswigger/security misconfiguration/Pasted image 20260903221143.png",
     "05-portswigger/security misconfiguration/CORS.md",
     "05-portswigger/security misconfiguration/CORS"
   ]

