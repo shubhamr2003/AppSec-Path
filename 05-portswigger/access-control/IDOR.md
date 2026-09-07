@@ -45,10 +45,10 @@ Then changed the value in cookie parameter
 Now the admin panel was visible in the response code so copy the request url and open it in different tab
 
 ==Note: If you copy the response url you'll only get the admin panel ui but wont get directed to the admin panel==
-![[Pasted image 20260905225545.png]]![[Pasted image 20260905225832.png]]
+![ccokie para](./images/editable-cookie-para.png)![success](./images/success.png)
 Or we could do this way as well
 
-![[Pasted image 20260905233541.png]]
+![alt](./images/alt-method.png)
 
 Lab 4:
 A **Role ID** in an HTTP request is usually an identifier that tells the server **which role/permission set a user or resource is associated with**.
@@ -166,7 +166,7 @@ in response and knew immediately i had to change the `roleid:1` to `roleid:2`
 `"email":"wienr@abc.com",`
 `"roleid":2`
 `}`
-![[Pasted image 20260906005045.png]]
+![roleid](./images/role-id.png)
 
 
 
@@ -176,7 +176,7 @@ Lab 5:
 Change the URL in the request line to `/` and add the HTTP header `X-Original-URL: /invalid`
 `X-Original-URL: /admin`
 
-![[Pasted image 20260907112011.png]]![[Pasted image 20260907112216.png]]
+![override header](./images/override-header.png)![override header2](./images/override-header2.png)
 
 But it says access denied so I change the request to
 `X-Original-Url: /admin/delete?username=carlos`
@@ -197,4 +197,6 @@ So we just add `?username=carlos` into  the main url
 `X-Original-Url: /admin/delete`
 
 And send to follow the redirection
-![[Pasted image 20260907114821.png]]
+![override header3](./images/override-header3.png)
+
+![](Pasted%20image%2020260907123818.png)
