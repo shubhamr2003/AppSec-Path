@@ -7,7 +7,8 @@ Unprotected Functionality
 Lab 1:
 
 Got the admin panel directory just by adding `robots.txt` at the end of the home url
-![[robots-txt.png]]
+![robots](./images/robots-txt.png)
+
 ![[admin-panel.png]]
 
 Lab 2:
