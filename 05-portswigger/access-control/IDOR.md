@@ -199,3 +199,8 @@ So we just add `?username=carlos` into  the main url
 And send to follow the redirection
 ![override header3](override-header3.png)
 
+
+##### Vertical Privilege escalation
+Lab 6:
+Method-based access control
+
