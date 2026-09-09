@@ -204,3 +204,31 @@ And send to follow the redirection
 Lab 6:
 Method-based access control
 
+So I captured the promotion request of user Carlos 
+And login request of user Wiener
+
+And swapped the cookie id of Carlos with Wiener
+![](cookie-tampering.png)
+
+It shows unauthorized, since the user name at the bottom of the request is still Carlos
+
+![](carlos.png)
+
+Now we try to change the user name
+
+![](wiener.png)
+
+We still get 401 unauthorized
+
+Now since the lab contains HTTP method based access control flaw, we'll try to change the method parameter in the request
+
+![](method.png)
+
+Which means that the request allows methods to be ...
+Right click and change the method and change the username to wiener
+
+![](change-method.png)
+
+Copying the request link and opening it in a new tab gives
+
+![](05-portswigger/access-control/images/solved.png)
