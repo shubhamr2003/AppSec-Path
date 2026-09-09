@@ -1,25 +1,3 @@
-### Horizontal privilege escalation 
-Horizontal privilege escalation occurs if a user is able to gain access to resources belonging to another user, instead of their own resources of that type. For example, if an employee can access the records of other employees as well as their own, then this is horizontal privilege escalation.
-
-Horizontal privilege escalation attacks may use similar types of exploit methods to vertical privilege escalation. For example, a user might access their own account page using the following URL:
-
-`https://insecure-website.com/myaccount?id=123`
-
-If an attacker modifies the `id` parameter value to that of another user, they might gain access to another user's account page, and the associated data and functions.
-
-Steps to reproduce:
-
-Capture the login request 
-Send to repeater
-Change the `my-account?id=wiener` to `my-account?id=carlos`
-
-![](Pasted%20image%2020260910000937.png)
-![](Pasted%20image%2020260910001105.png)
-
-#### Note:
-This is an example of an insecure direct object reference (IDOR) vulnerability. This type of vulnerability arises where user-controller parameter values are used to access resources or functions directly.
-#### Learnings:
-
 **Not every horizontal privilege escalation is IDOR**
 They are very closely related, but they are not exactly the same thing.
 
@@ -164,6 +142,102 @@ Since you're currently studying **Broken Access Control**, learn these as separa
 And remember:
 
 > **IDOR can be the mechanism that causes horizontal or vertical privilege escalation, but they aren't synonyms.**
+### When horizontal escalation IS IDOR
+
+Suppose you're User A:
+
+```http
+GET /api/profile/1001
+```
+
+Your ID is `1001`.
+
+You change it:
+
+```http
+GET /api/profile/1002
+```
+
+and see User B's profile.
+
+Here:
+
+- **IDOR/BOLA** → you accessed another user's object by manipulating its identifier.
+    
+- **Horizontal privilege escalation** → you crossed from User A → User B.
+    
+
+So **one vulnerability can be both**.
+
+---
+
+### Horizontal escalation WITHOUT IDOR
+
+Imagine the application has:
+
+```http
+POST /api/user/change-email
+```
+
+There is no user ID in the request.
+
+Your account is:
+
+```text
+User A
+```
+
+But because of a broken authorization check, you discover that you can call an endpoint/function that changes **another user's email** based on some server-side state or another non-ID mechanism.
+
+That's still:
+
+**Horizontal privilege escalation**
+
+but it isn't necessarily an IDOR.
+
+---
+
+### Easy way to remember
+
+Ask **two different questions**:
+
+**Question 1 — What am I accessing?**
+
+> Am I accessing another user's object by manipulating an identifier?
+
+➡️ **IDOR/BOLA**
+
+**Question 2 — What privilege boundary did I cross?**
+
+> Did I go from my account to another user with similar privileges?
+
+➡️ **Horizontal privilege escalation**
+
+So you can have:
+
+```text
+IDOR + Horizontal escalation
+        ↓
+User A → User B
+```
+
+or:
+
+```text
+IDOR + Vertical escalation
+        ↓
+User → Admin
+```
+
+or:
+
+```text
+Horizontal escalation
+        ↓
+User A → User B
+        ↓
+without an IDOR
+```
 
 ### For bug bounty reports
 
@@ -186,4 +260,3 @@ or:
 to access another user's object → **IDOR/BOLA is a strong classification**.
 
 If the issue is simply that authorization isn't enforced for a privileged action, it may be **broken access control / privilege escalation** without being IDOR.
-
