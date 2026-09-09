@@ -1,3 +1,38 @@
+##### Vertical Privilege escalation
+Lab 6:
+Method-based access control
+
+So I captured the promotion request of user Carlos 
+And login request of user Wiener
+
+And swapped the cookie id of Carlos with Wiener
+![cookie-tampering](./images/cookie-tampering.png)
+
+It shows unauthorized, since the user name at the bottom of the request is still Carlos
+
+![carlos](./images/carlos.png)
+
+Now we try to change the user name
+
+![wiener](./images/wiener.png)
+
+We still get 401 unauthorized
+
+Now since the lab contains HTTP method based access control flaw, we'll try to change the method parameter in the request
+
+![method](./images/method.png)
+
+Which means that the request allows methods to be ...
+Right click and change the method and change the username to wiener
+
+![change-method](./images/change-method.png)
+
+Copying the request link and opening it in a new tab gives
+
+![solved](./images/solved.png)
+
+
+#### Learnings:
 This is a classic **HTTP verb/method tampering** observation, and it tells you a few important things about how the backend is built:
 
 **1. The method isn't strictly validated before the request reaches application logic**
