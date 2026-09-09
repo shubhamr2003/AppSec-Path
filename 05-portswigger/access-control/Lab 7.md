@@ -13,11 +13,11 @@ Capture the login request
 Send to repeater
 Change the `my-account?id=wiener` to `my-account?id=carlos`
 
-![](Pasted%20image%2020260910000937.png)
-![](Pasted%20image%2020260910001105.png)
-
+![id-param](./images/id-param.png)
+![api-key](./images/api-key.png)
 #### Note:
 This is an example of an insecure direct object reference (IDOR) vulnerability. This type of vulnerability arises where user-controller parameter values are used to access resources or functions directly.
+
 #### Learnings:
 
 **Not every horizontal privilege escalation is IDOR**
