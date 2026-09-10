@@ -1,4 +1,4 @@
-##### User ID controlled by request parameter, with unpredictable user IDs
+#### User ID controlled by request parameter, with unpredictable user IDs
 
 Steps to reproduce:
 
