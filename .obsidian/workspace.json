@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-portswigger/access-control/Lab 7.md",
+                "file": "05-portswigger/access-control/Lab 8.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 7"
+              "title": "Lab 8"
             }
           }
         ]
@@ -190,9 +190,13 @@
   },
   "active": "4421f54007e924f5",
   "lastOpenFiles": [
+    "05-portswigger/access-control/images/solved 1.png",
+    "05-portswigger/access-control/Lab 8.md",
+    "05-portswigger/access-control/images/carlos-api.png",
+    "05-portswigger/access-control/images/unique-userid.png",
+    "05-portswigger/access-control/Lab 7.md",
     "05-portswigger/access-control/images/api-key.png",
     "05-portswigger/access-control/images/id-param.png",
-    "05-portswigger/access-control/Lab 7.md",
     "05-portswigger/access-control/images/robots-txt.png",
     "04-vulnerabilities/access control/What is an object.md",
     "04-vulnerabilities/access control/Lab 7 learning.md",
@@ -217,15 +221,11 @@
     "05-portswigger/access-control/images/change-method.png",
     "05-portswigger/access-control/images/method.png",
     "05-portswigger/access-control/images/wiener.png",
-    "05-portswigger/access-control/images/cookie-tampering.png",
-    "05-portswigger/access-control/images/carlos.png",
     "LAB-TRACKER.md",
-    "Pasted image 20260909223025.png",
     "resume.md",
     "01-foundations/web-fundamentals/Override-Headers.md",
     "01-foundations/web-fundamentals/Headers.md",
     "01-foundations/web-fundamentals/HTTP-Methods.md",
-    "01-foundations/web-fundamentals/HTTP (General).md",
     "05-portswigger/access-control/images",
     "13-images/idor/lab3",
     "13-images/idor/lab2",
