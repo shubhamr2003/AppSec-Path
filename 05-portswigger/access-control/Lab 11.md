@@ -7,12 +7,13 @@ You won't see any parameter pointing directly to ab object which you can exploit
 On the live chatting page you'll also see an option of view transcript
 This option downloads the transcript into your system. Capture this request and you'll see the  object id 2.txt 
 Just change the object id to 1.txt and you now have access to someone else's chat
+And we get the password of user carlos
 
 ![idor-transcript](./images/idor-transcript.png)
 
 If we change the 2.txt to 3.txt we get no transcript
 
-![](Pasted%20image%2020260911223942.png)
+![3.](./images/3.png)
 
 P.S: Here what you can also do is create another chat where you'll get the object id of transcript to be something like 3.txt 
 
