@@ -10,6 +10,10 @@ Just change the object id to 1.txt and you now have access to someone else's cha
 
 ![idor-transcript](./images/idor-transcript.png)
 
+If we change the 2.txt to 3.txt we get no transcript
+
+![](Pasted%20image%2020260911223942.png)
+
 P.S: Here what you can also do is create another chat where you'll get the object id of transcript to be something like 3.txt 
 
 This means that
