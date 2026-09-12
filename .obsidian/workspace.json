@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-portswigger/access-control/Lab 12.md",
+                "file": "13-bWapp/Installation Steps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 12"
+              "title": "Installation Steps"
             }
           }
         ]
@@ -190,10 +190,15 @@
   },
   "active": "4421f54007e924f5",
   "lastOpenFiles": [
+    "05-portswigger/access-control/Lab 13.md",
+    "13-bWapp/Installation Steps.md",
+    "13-bWapp",
+    "05-portswigger/access-control/Lab 12.md",
+    "Pasted image 20260912115426.png",
+    "Pasted image 20260912115340.png",
     "05-portswigger/access-control/Lab 11.md",
     "05-portswigger/access-control/images/3.png",
     "05-portswigger/access-control/images/idor-transcript.png",
-    "05-portswigger/access-control/Lab 12.md",
     "05-portswigger/access-control/Untitled",
     "05-portswigger/access-control/Lab 1.md",
     "04-vulnerabilities/access control/How to test for IDORs.md",
@@ -214,8 +219,6 @@
     "05-portswigger/access-control/Lab 2.md",
     "05-portswigger/access-control/images/solved 1.png",
     "05-portswigger/access-control/images/carlos-api.png",
-    "05-portswigger/access-control/images/unique-userid.png",
-    "05-portswigger/access-control/images/api-key.png",
     "04-vulnerabilities/access control/Lab 7 learning.md",
     "05-portswigger/access-control/IDOR.md",
     "04-vulnerabilities/access control/Lab 6 learning.md",
@@ -225,7 +228,6 @@
     "04-vulnerabilities/access control/Lab 3 learning.md",
     "04-vulnerabilities/access control/Lab 2 learning.md",
     "04-vulnerabilities/access control/Lab 1 learning.md",
-    "05-portswigger/security-misconfiguration/CORS/Lab 1.md",
     "05-portswigger/access-control/images",
     "13-images/idor/lab3",
     "13-images/idor/lab2",
@@ -233,7 +235,6 @@
     "13-images/cors",
     "13-images/idor",
     "13-images",
-    "05-portswigger/security-misconfiguration/images/lab3",
-    "05-portswigger/security-misconfiguration/images/lab2"
+    "05-portswigger/security-misconfiguration/images/lab3"
   ]
 }
