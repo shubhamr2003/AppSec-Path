@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-portswigger/xss/Lab 1.md",
+                "file": "04-vulnerabilities/path-traversal/Theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 1"
+              "title": "Theory"
             }
           }
         ]
@@ -190,13 +190,17 @@
   },
   "active": "4421f54007e924f5",
   "lastOpenFiles": [
-    "05-portswigger/xss/images/alert.png",
+    "04-vulnerabilities/path-traversal/path-travs.png",
+    "04-vulnerabilities/xss/xss.png",
+    "04-vulnerabilities/path-traversal/Theory.md",
+    "04-vulnerabilities/xss/Theory.md",
+    "01-foundations/web-fundamentals/OWASP TOP 10.md",
+    "03-burp-suite/proxy.md",
     "05-portswigger/xss/Lab 1.md",
+    "05-portswigger/xss/images/alert.png",
     "05-portswigger/xss/images",
     "05-portswigger/information-disclosure/Lab 1.md",
     "05-portswigger/xss/images/alert-solved.png",
-    "04-vulnerabilities/xss/Theory.md",
-    "01-foundations/web-fundamentals/OWASP TOP 10.md",
     "04-vulnerabilities/information-disclosure/Theory.md",
     "05-portswigger/information-disclosure/images",
     "05-portswigger/access-control/Lab 13.md",
@@ -212,7 +216,6 @@
     "13-bWapp",
     "05-portswigger/access-control/Lab 11.md",
     "05-portswigger/access-control/images/3.png",
-    "05-portswigger/access-control/images/idor-transcript.png",
     "05-portswigger/access-control/Untitled",
     "05-portswigger/access-control/Lab 1.md",
     "04-vulnerabilities/access control/How to test for IDORs.md",
@@ -222,14 +225,11 @@
     "05-portswigger/access-control/Lab 6.md",
     "04-vulnerabilities/access control/What is an object.md",
     "04-vulnerabilities/access control/IDOR.md",
-    "05-portswigger/access-control/images/panel.png",
     "05-portswigger/access-control/Lab 5.md",
     "05-portswigger/access-control/Lab 4.md",
     "05-portswigger/access-control/Lab 7.md",
     "05-portswigger/access-control/Lab 3.md",
     "05-portswigger/access-control/Lab 2.md",
-    "04-vulnerabilities/access control/Lab 7 learning.md",
-    "05-portswigger/access-control/IDOR.md",
     "05-portswigger/access-control/images",
     "13-images/idor/lab3",
     "13-images/idor/lab2",

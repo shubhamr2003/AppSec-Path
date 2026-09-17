@@ -1,3 +1,11 @@
+resources: 
+
+yt:
+- https://youtu.be/cTJykfSLlkU
+- [xss playlist](https://youtube.com/playlist?list=PLVLbIIcGrsT7JLzxjD8lvAmR_OSFQwrxg&si=kbrsZvp1-4nW57eM)
+- [defronix academy](https://www.youtube.com/live/tZKF0LnPVsA?si=hQrN4RqdedU2zkut)
+- [advanced](https://youtu.be/0GxLc2vsQVg)
+- 
 ## What is XSS?
 
 **Cross-Site Scripting (XSS)** is a web application vulnerability in which an attacker causes a website to execute untrusted JavaScript in another user’s browser. It usually happens when an application places user-controlled input into a page without correctly validating or encoding it.[[owasp](https://owasp.org/www-community/attacks/xss)]
@@ -11,6 +19,8 @@ The script runs in the security context of the vulnerable website, so it may be 
 |**Reflected XSS**|Malicious input comes from the current HTTP request and is immediately reflected in the server’s response.|A vulnerable search or error page displays a value from a URL parameter without safe encoding.|
 |**Stored XSS**|Malicious input is saved by the application—such as in a database—and later delivered to other users.|A comment, profile field, or forum post contains unsafe script content.|
 |**DOM-based XSS**|Client-side JavaScript reads attacker-controlled data and writes it into the page through an unsafe DOM operation. The server response itself may not change.|JavaScript reads a URL fragment and inserts it using an unsafe HTML-rendering method.|
+
+![](xss.png)
 
 These three categories are the commonly recognized types.[[portswigger](https://portswigger.net/web-security/cross-site-scripting)][[owasp](https://owasp.org/www-community/Types_of_Cross-Site_Scripting)]
 
