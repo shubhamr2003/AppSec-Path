@@ -1,6 +1,5 @@
 # Reflected XSS into HTML context with nothing encoded
 
-Steps to reproduce:
 Just paste this script 
 ```
  <script>alert(1)</script>
