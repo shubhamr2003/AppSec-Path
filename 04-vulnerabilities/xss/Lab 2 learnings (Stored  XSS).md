@@ -1,14 +1,5 @@
 
-# Stored XSS into HTML context with nothing encoded
 
-Similar to lab 1 but since this is a stored xss lab we need to enter the payload 
-```
-<script>alert(1)</script>
-```
-into the comment, where the input by the user is saved into the server itself.
-
-![script](./images/script.png)
-![solved](./images/solved.png)
 
 **P.S:** Note how the payload isn't executed on the client side immediately as it did in lab 1. This is in stored xss the payload is stored in the database and when another user tries access that page (in this case the comment page), it directly executes.
 
