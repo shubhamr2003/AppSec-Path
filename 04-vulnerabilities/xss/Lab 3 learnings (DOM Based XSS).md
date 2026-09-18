@@ -1,4 +1,4 @@
-
+# DOM Based XSS
 DOM-based XSS is a type of cross-site scripting where the **payload never appears in the raw HTML response from the server**; instead, the vulnerable JavaScript running in the browser **reads data from the DOM (or URL) and writes it back into the page unsafely**, allowing your script to execute.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
 In other words: the server sends “clean” HTML, but the client-side JS builds part of the page dynamically using untrusted input (like `location.hash`, `location.search`, `document.URL`, or `innerHTML`) without proper encoding, and that’s where the XSS happens.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[brightsec](https://brightsec.com/blog/broken-access-control-attack-examples-and-4-defensive-measures/)]
