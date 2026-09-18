@@ -2,7 +2,9 @@
 
 Steps to reproduce:
 Just paste this script 
+```
  <script>alert(1)</script>
+```
 ![alert](./images/alert.png)
 
 P.S: You can confirm most kinds of XSS vulnerability by injecting a payload that causes your own browser to execute some arbitrary JavaScript. It's long been common practice to use the `alert()` function for this purpose because it's short, harmless, and pretty hard to miss when it's successfully called. In fact, you solve the majority of our XSS labs by invoking `alert()` in a simulated victim's browser.

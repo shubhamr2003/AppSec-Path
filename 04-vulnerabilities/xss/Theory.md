@@ -22,6 +22,11 @@ The script runs in the security context of the vulnerable website, so it may be 
 
 ![](xss.png)
 
+| Type              | Stored where?            | Requires victim interaction?         | Common location          |
+| ----------------- | ------------------------ | ------------------------------------ | ------------------------ |
+| **Reflected XSS** | Usually request/response | Usually yes                          | URL parameters, search   |
+| **Stored XSS**    | Server/database          | No, after victim views affected page | Comments, profiles       |
+| **DOM-based XSS** | Client-side DOM          | Usually yes                          | JavaScript/URL fragments |
 These three categories are the commonly recognized types.[[portswigger](https://portswigger.net/web-security/cross-site-scripting)][[owasp](https://owasp.org/www-community/Types_of_Cross-Site_Scripting)]
 
 ### 1. Reflected XSS

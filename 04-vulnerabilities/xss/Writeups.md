@@ -1,0 +1,2 @@
+- [How I Found a Critical XSS On a Public Bug Bounty Program](https://1-day.medium.com/how-i-found-a-critical-xss-on-a-public-bug-bounty-program-27d492117f61)
+- 

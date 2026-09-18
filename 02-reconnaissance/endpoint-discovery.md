@@ -1,0 +1,2 @@
+- [JavaScript Bookmarklet](https://gist.github.com/mhmdiaa/dc24c06ab18ebe90df8981cd7b25a548)
+- 
