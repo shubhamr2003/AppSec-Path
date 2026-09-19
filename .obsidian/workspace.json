@@ -188,8 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "4421f54007e924f5",
+  "active": "ce3c6410c7acac96",
   "lastOpenFiles": [
+    "02-reconnaissance/images/method.jpg",
+    "01-foundations/web-technologies/method.jpg",
     "02-reconnaissance/endpoint-discovery.md",
     "02-reconnaissance/methodology.md",
     "02-reconnaissance/images/methodology.png",
@@ -217,7 +219,6 @@
     "05-portswigger/xss/images/alert.png",
     "05-portswigger/xss/images",
     "05-portswigger/information-disclosure/Lab 1.md",
-    "05-portswigger/xss/images/alert-solved.png",
     "04-vulnerabilities/information-disclosure/Theory.md",
     "05-portswigger/information-disclosure/images",
     "05-portswigger/access-control/Lab 13.md",
