@@ -1,0 +1,3 @@
+- wappalyzer- download from google web store and add it to you browser
+- [builtiwith](https://builtwith.com/)
+- 

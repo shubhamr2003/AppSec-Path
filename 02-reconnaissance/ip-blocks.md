@@ -8,5 +8,13 @@
 - [whoxy](https://www.whoxy.com/)
 - [whois lookup](https://who.is/)
 - nslookup- kali tool
+
+
+
+kali tools:
+- amass
+- subfinder
+- assestfinder
+- httpx
 - 
 

@@ -11,12 +11,14 @@
             "id": "4421f54007e924f5",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "02-reconnaissance/images/method.jpg"
+                "file": "02-reconnaissance/methodology.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "method"
+              "icon": "lucide-file",
+              "title": "methodology"
             }
           }
         ]
@@ -186,15 +188,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce3c6410c7acac96",
+  "active": "4421f54007e924f5",
   "lastOpenFiles": [
+    "02-reconnaissance/kali tools/amass.md",
+    "02-reconnaissance/ip-blocks.md",
+    "02-reconnaissance/technology-fingerprinting.md",
+    "02-reconnaissance/amass.md",
+    "02-reconnaissance/kali tools",
+    "02-reconnaissance/images/methodology.png",
     "02-reconnaissance/images/method.jpg",
     "02-reconnaissance/methodology.md",
     "01-foundations/web-technologies/method.jpg",
     "02-reconnaissance/endpoint-discovery.md",
-    "02-reconnaissance/images/methodology.png",
     "02-reconnaissance/images/Methodology.png",
-    "02-reconnaissance/ip-blocks.md",
     "02-reconnaissance/images",
     "02-reconnaissance/website-cloning.md",
     "02-reconnaissance/images/recon.png",
@@ -227,11 +233,8 @@
     "05-portswigger/access-control/Lab 11.md",
     "05-portswigger/access-control/Untitled",
     "05-portswigger/access-control/Lab 1.md",
-    "04-vulnerabilities/access control/How to test for IDORs.md",
-    "05-portswigger/access-control/Lab 10.md",
     "05-portswigger/access-control/images",
     "13-images/idor/lab3",
-    "13-images/idor/lab2",
-    "13-images/idor/lab1"
+    "13-images/idor/lab2"
   ]
 }
