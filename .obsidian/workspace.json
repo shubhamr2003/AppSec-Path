@@ -11,14 +11,12 @@
             "id": "4421f54007e924f5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "02-reconnaissance/methodology.md",
-                "mode": "source",
-                "source": false
+                "file": "02-reconnaissance/images/method.jpg"
               },
-              "icon": "lucide-file",
-              "title": "methodology"
+              "icon": "lucide-image",
+              "title": "method"
             }
           }
         ]
@@ -191,9 +189,9 @@
   "active": "ce3c6410c7acac96",
   "lastOpenFiles": [
     "02-reconnaissance/images/method.jpg",
+    "02-reconnaissance/methodology.md",
     "01-foundations/web-technologies/method.jpg",
     "02-reconnaissance/endpoint-discovery.md",
-    "02-reconnaissance/methodology.md",
     "02-reconnaissance/images/methodology.png",
     "02-reconnaissance/images/Methodology.png",
     "02-reconnaissance/ip-blocks.md",
@@ -216,7 +214,6 @@
     "04-vulnerabilities/path-traversal/path-travs.png",
     "01-foundations/web-fundamentals/OWASP TOP 10.md",
     "03-burp-suite/proxy.md",
-    "05-portswigger/xss/images/alert.png",
     "05-portswigger/xss/images",
     "05-portswigger/information-disclosure/Lab 1.md",
     "04-vulnerabilities/information-disclosure/Theory.md",
