@@ -1,3 +1,8 @@
+reosurce:
+
+yt:
+- [DOM XSS Concept](https://youtu.be/biMtIOR8UAI?si=jgqT6aeO4ApIRL-a)
+- 
 # DOM Based XSS
 DOM-based XSS is a type of cross-site scripting where the **payload never appears in the raw HTML response from the server**; instead, the vulnerable JavaScript running in the browser **reads data from the DOM (or URL) and writes it back into the page unsafely**, allowing your script to execute.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
