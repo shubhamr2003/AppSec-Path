@@ -26,8 +26,7 @@ Types:
 - value
 
 fuzzing wordlists/seclists:
-
-#### recursive fuzzing:
+## recursive fuzzing:
 when ffuf finds a directory (or path) that looks valid, it automatically starts fuzzing inside that directory too, without you having to run a new command manually.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
 
 Think of it as:  
@@ -122,7 +121,6 @@ Avoid or limit it when:
 
 In those cases, use a small `-recursion-depth` (1 or 2) or skip recursion entirely.
 ## How this helps in bug bounty / appsec
-
 Recursive fuzzing helps you:
 - Discover hidden admin panels, APIs, and internal tools nested under found directories.
 - Find deeper endpoints that might have weaker security (e.g., `/admin/debug/`, `/api/internal/`).

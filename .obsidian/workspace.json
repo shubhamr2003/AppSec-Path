@@ -41,7 +41,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "byCreatedTimeReverse",
-                "autoReveal": false,
+                "autoReveal": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -188,7 +188,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "4421f54007e924f5",
+  "active": "ce3c6410c7acac96",
   "lastOpenFiles": [
     "02-reconnaissance/github-recon.md",
     "02-reconnaissance/fuzzing.md",
