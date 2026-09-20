@@ -26,13 +26,13 @@ Types:
 - value
 
 fuzzing wordlists/seclists:
-## recursive fuzzing:
+## Recursive fuzzing:
 when ffuf finds a directory (or path) that looks valid, it automatically starts fuzzing inside that directory too, without you having to run a new command manually.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
 
 Think of it as:  
 when you find `/admin/`, now fuzz `/admin/FUZZ` 
 if you find `/admin/api/`, now fuzz `/admin/api/FUZZ`, and so on, up to a depth you choose.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
-## Basic idea with an example
+### Basic idea with an example
 
 Normal (non-recursive) fuzzing:
 
@@ -68,15 +68,15 @@ Now ffuf will:
 3. If it then finds `https://target.com/admin/api/`, and your depth allows, it:
     - Starts fuzzing `https://target.com/admin/api/FUZZ`.
 4. Continues until it hits the `-recursion-depth` limit.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
-## Key ffuf recursion options
+### Key ffuf recursion options
 
 These are the main flags you should understand:
-### `-recursion`
+#### `-recursion`
 Turns on recursive fuzzing.
 ```
 -recursion
 ```
-### `-recursion-depth N`
+#### `-recursion-depth N`
 Limits how deep ffuf will go.
 - `-recursion-depth 1` → only root + one level (`/`, `/admin/`, but not `/admin/api/`).
 - `-recursion-depth 3` → up to three levels deep.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
@@ -85,7 +85,7 @@ Example:
 -recursion-depth 3
 ```
 This prevents infinite or extremely deep crawling.
-### `-recursion-strategy`
+#### `-recursion-strategy`
 Controls **which responses trigger recursion**.
 Common strategies:
 - `found-only`  
@@ -99,13 +99,13 @@ You typically want:
 -recursion-strategy found-only
 ```
 combined with your normal filters like `-fc 404`.
-### `-recursion-base`
+#### `-recursion-base`
 Used when your URL pattern isn’t simply `.../FUZZ` but something like:
 ```
 -u "https://target.com/FUZZ/"
 ```
 or when you want to control how the next level is built. In most basic cases, you don’t need to touch this; ffuf infers it from your `-u` and `FUZZ` position.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
-## When to use recursive fuzzing
+### When to use recursive fuzzing
 
 Use it when:
 - You’re doing **directory/file discovery** on a web app.
@@ -120,7 +120,7 @@ Avoid or limit it when:
 - You only care about top-level paths.
 
 In those cases, use a small `-recursion-depth` (1 or 2) or skip recursion entirely.
-## How this helps in bug bounty / appsec
+### How this helps in bug bounty / appsec
 Recursive fuzzing helps you:
 - Discover hidden admin panels, APIs, and internal tools nested under found directories.
 - Find deeper endpoints that might have weaker security (e.g., `/admin/debug/`, `/api/internal/`).
