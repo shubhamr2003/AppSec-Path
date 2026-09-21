@@ -53,7 +53,7 @@ This tree is the **DOM**.
 
 The global object **`document`** is your main entry point.
 Common operations:
-### 1)Selecting elements
+### 1) Selecting elements
 ```
 const title = document.getElementById('title');
 const paragraphs = document.getElementsByClassName('text');
@@ -64,7 +64,8 @@ const allPs = document.querySelectorAll('p');
 - `getElementById`, `getElementsByClassName`, `getElementsByTagName` → older APIs.
 - `querySelector`, `querySelectorAll` → CSS-selector based, more flexible.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
 
-### Reading content
+
+### 2) Reading content
 ```
 const titleText = title.textContent;        // "Hello"
 const titleHtml = title.innerHTML;          // "Hello" (same here, no nested HTML)
@@ -75,7 +76,7 @@ const pText = firstP.textContent;           // "Welcome"
 - `innerHTML` → HTML as a string (can include tags).[[arxiv](https://arxiv.org/html/2605.25865v1)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
 
-### 2)Modifying content
+### 3) Modifying content
 ```
 title.textContent = 'Hi there';
 firstP.innerHTML = '<strong>Welcome</strong>';
@@ -83,7 +84,7 @@ firstP.innerHTML = '<strong>Welcome</strong>';
 Changing `innerHTML` or `textContent` updates what the user sees immediately.
 
 
-### 3)Creating and adding elements
+### 4) Creating and adding elements
 ```
 const newP = document.createElement('p');
 newP.textContent = 'New paragraph';
@@ -92,7 +93,7 @@ document.body.appendChild(newP);
 This adds a new `<p>` at the end of `<body>`.
 
 
-### 4)Changing attributes and classes
+### 5) Changing attributes and classes
 ```
 title.setAttribute('data-role', 'main-heading');
 title.classList.add('highlight');
