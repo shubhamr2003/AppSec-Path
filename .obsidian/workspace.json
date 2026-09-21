@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-burp-suite/intruder.md",
+                "file": "04-vulnerabilities/xss/DOM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "intruder"
+              "title": "DOM"
             }
           }
         ]
@@ -188,8 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "ce3c6410c7acac96",
+  "active": "4421f54007e924f5",
   "lastOpenFiles": [
+    "03-burp-suite/intruder.md",
+    "04-vulnerabilities/xss/DOM.md",
     "04-vulnerabilities/information-disclosure/Theory.md",
     "02-reconnaissance/fuzzing.md",
     "02-reconnaissance/github-recon.md",
@@ -229,8 +231,6 @@
     "05-portswigger/information-disclosure/images",
     "05-portswigger/access-control/Lab 13.md",
     "05-portswigger/information-disclosure",
-    "05-portswigger/information-disclosure.md",
-    "05-portswigger/access-control/Lab 12.md",
     "13-bWapp",
     "05-portswigger/access-control/Untitled",
     "05-portswigger/access-control/images",
