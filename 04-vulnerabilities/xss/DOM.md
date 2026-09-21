@@ -11,9 +11,7 @@ When people say “DOM in JS”, they mean:
 
 > “How JavaScript sees and interacts with the page’s HTML structure, content, and attributes.”
 
----
-
-## 1) What the DOM actually is
+## What the DOM actually is
 
 When the browser loads a page like:
 ```
@@ -51,7 +49,7 @@ Each element, attribute, and piece of text becomes a **node** in this tree. Java
 
 This tree is the **DOM**.
 
-## 2) How JavaScript accesses the DOM
+## How JavaScript accesses the DOM
 
 The global object **`document`** is your main entry point.
 Common operations:
@@ -97,7 +95,7 @@ title.classList.add('highlight');
 title.classList.remove('old-class');
 ```
 
-## 3) The DOM as a tree of nodes
+## The DOM as a tree of nodes
 
 Key node types:
 - **Element nodes**: `<div>`, `<p>`, `<a>`, etc.
@@ -113,7 +111,7 @@ const parent = firstP.parentNode;
 const next = firstP.nextSibling;
 ```
 
-## 4) Events and dynamic behavior
+## Events and dynamic behavior
 
 The DOM also defines **events**: user actions or browser events like:
 - `click`, `submit`, `input`, `change`
@@ -132,7 +130,7 @@ When the user clicks the button, the browser fires a `click` event on that DOM n
 
 This is how interactive pages work:  
 **HTML structure (DOM) + JavaScript event handlers + dynamic DOM updates = dynamic UI.**[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)]
-## 5) The DOM and the browser rendering pipeline
+## The DOM and the browser rendering pipeline
 
 Roughly:
 1. Browser downloads HTML.
@@ -147,7 +145,7 @@ When you change the DOM with JS:
 
 For security, the key point is:  
 **Anything you inject into the DOM (especially via innerHTML, document.write, etc.) can become part of the rendered page and potentially execute scripts.** This is the core of DOM-based XSS.[[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
-## 6) DOM and security (why it matters for you)
+## DOM and security (why it matters for you)
 Because the DOM is how JS “sees” the page, many vulnerabilities revolve around it:
 ### DOM-based XSS
 
