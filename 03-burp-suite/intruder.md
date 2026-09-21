@@ -1,0 +1,1 @@
+attack types: https://portswigger.net/burp/documentation/desktop/tools/intruder/attack-types
