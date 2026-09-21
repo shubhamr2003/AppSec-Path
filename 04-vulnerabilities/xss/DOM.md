@@ -201,7 +201,7 @@ Document
 				└── "This is a paragraph." 
 				
 • The DOM is like a tree of folders and files (your page structure). 
-• Each tag (<h1>, <p>, <ul>, etc.) is like a folder, and the text/content inside is like a file inside that folder. 
+• Each tag is like a folder, and the text/content inside is like a file inside that folder. 
 • With JavaScript, you don’t have to open the original HTML file — you just “walk” through the DOM tree (like browsing folders in Explorer) and edit the objects directly. 
 • The browser updates the page immediately to match the DOM changes. 
 • Meanwhile, your original HTML file on disk stays the same (only the DOM in memory has changed). 
