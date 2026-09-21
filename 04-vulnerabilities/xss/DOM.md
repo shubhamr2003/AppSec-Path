@@ -53,7 +53,7 @@ This tree is the **DOM**.
 
 The global object **`document`** is your main entry point.
 Common operations:
-### Selecting elements
+### 1)Selecting elements
 ```
 const title = document.getElementById('title');
 const paragraphs = document.getElementsByClassName('text');
@@ -74,21 +74,25 @@ const pText = firstP.textContent;           // "Welcome"
 - `textContent` → plain text.
 - `innerHTML` → HTML as a string (can include tags).[[arxiv](https://arxiv.org/html/2605.25865v1)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
-### Modifying content
+
+### 2)Modifying content
 ```
 title.textContent = 'Hi there';
 firstP.innerHTML = '<strong>Welcome</strong>';
 ```
 Changing `innerHTML` or `textContent` updates what the user sees immediately.
 
-### Creating and adding elements
+
+### 3)Creating and adding elements
 ```
 const newP = document.createElement('p');
 newP.textContent = 'New paragraph';
 document.body.appendChild(newP);
 ```
 This adds a new `<p>` at the end of `<body>`.
-### Changing attributes and classes
+
+
+### 4)Changing attributes and classes
 ```
 title.setAttribute('data-role', 'main-heading');
 title.classList.add('highlight');
