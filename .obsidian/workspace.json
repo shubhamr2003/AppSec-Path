@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04-vulnerabilities/xss/DOM.md",
+                "file": "05-portswigger/information-disclosure/Lab 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DOM"
+              "title": "Lab 1"
             }
           }
         ]
@@ -190,8 +190,22 @@
   },
   "active": "4421f54007e924f5",
   "lastOpenFiles": [
-    "03-burp-suite/intruder.md",
+    "05-portswigger/information-disclosure/images/err.png",
+    "05-portswigger/information-disclosure/Lab 1.md",
     "04-vulnerabilities/xss/DOM.md",
+    "04-vulnerabilities/xss/Lab 3 learnings (DOM Based XSS).md",
+    "04-vulnerabilities/xss/images/css2.png",
+    "04-vulnerabilities/xss/images/css.png",
+    "04-vulnerabilities/xss/Theory.md",
+    "04-vulnerabilities/xss/Lab 2 learnings (Stored  XSS).md",
+    "04-vulnerabilities/xss/Lab 1 learnings (Reflected XSS).md",
+    "04-vulnerabilities/xss/Writeups.md",
+    "04-vulnerabilities/xss/images/xss.png",
+    "04-vulnerabilities/xss/images/h1.png",
+    "04-vulnerabilities/xss/images",
+    "04-vulnerabilities/xss/images/innerHTML.png",
+    "Pasted image 20260921165012.png",
+    "03-burp-suite/intruder.md",
     "04-vulnerabilities/information-disclosure/Theory.md",
     "02-reconnaissance/fuzzing.md",
     "02-reconnaissance/github-recon.md",
@@ -205,36 +219,21 @@
     "02-reconnaissance/amass.md",
     "02-reconnaissance/kali tools",
     "02-reconnaissance/images/methodology.png",
-    "02-reconnaissance/images/method.jpg",
-    "01-foundations/web-technologies/method.jpg",
     "02-reconnaissance/endpoint-discovery.md",
-    "02-reconnaissance/images/Methodology.png",
     "02-reconnaissance/images",
     "02-reconnaissance/website-cloning.md",
-    "04-vulnerabilities/xss/Lab 3 learnings (DOM Based XSS).md",
-    "Pasted image 20260918083444.png",
-    "04-vulnerabilities/xss/Lab 2 learnings (Stored  XSS).md",
     "05-portswigger/xss/Lab 3.md",
-    "04-vulnerabilities/xss/Lab 1 learnings (Reflected XSS).md",
-    "04-vulnerabilities/xss/xss.png",
     "05-portswigger/xss/Lab 2.md",
-    "05-portswigger/xss/images/script.png",
     "05-portswigger/xss/Lab 1.md",
-    "05-portswigger/xss/images/solved.png",
-    "04-vulnerabilities/xss/Writeups.md",
-    "04-vulnerabilities/xss/Theory.md",
     "04-vulnerabilities/path-traversal/Theory.md",
     "01-foundations/web-fundamentals/OWASP TOP 10.md",
     "03-burp-suite/proxy.md",
     "05-portswigger/xss/images",
-    "05-portswigger/information-disclosure/Lab 1.md",
     "05-portswigger/information-disclosure/images",
-    "05-portswigger/access-control/Lab 13.md",
     "05-portswigger/information-disclosure",
     "13-bWapp",
     "05-portswigger/access-control/Untitled",
     "05-portswigger/access-control/images",
-    "13-images/idor/lab3",
-    "13-images/idor/lab2"
+    "13-images/idor/lab3"
   ]
 }

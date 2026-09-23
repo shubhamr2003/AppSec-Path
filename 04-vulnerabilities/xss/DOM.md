@@ -4,6 +4,9 @@ resources:
 
 yt:
 - [DOM Basics](https://www.youtube.com/watch?v=NO5kUNxGIu0)
+- [DOM ](https://youtu.be/2IPEp_4obGw)
+- [JavaScript basics](https://youtube.com/playlist?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW&si=LC_l1jCAuGd2wSxR)
+- 
 
 In JavaScript, **DOM** stands for **Document Object Model**. It’s the browser’s **structured, in-memory representation of the HTML page**, exposed as JavaScript objects that you can read and modify.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
@@ -48,6 +51,56 @@ Each element, attribute, and piece of text becomes a **node** in this tree. Java
 - Add/remove elements dynamically.[[arxiv](https://arxiv.org/html/2605.25865v1)][[acunetix](https://www.acunetix.com/blog/web-security-zone/what-are-insecure-direct-object-references/)][[aikido](https://www.aikido.dev/blog/idor-vulnerability-explained)]
 
 This tree is the **DOM**.
+
+## 4 pillars of DOM
+
+#### 1) Selecting an element
+
+```
+document.querySelector("h1")
+```
+
+id: `document.querySelector("#123")`
+class: `document.querySelector(".class")`
+
+Here `document` refers to the `html document` 
+
+```
+var a= document.querySelector("h1")
+console.log(a)
+```
+![innerHTML](./images/innerHTML.png)
+
+#### 2) Changing html
+
+```
+var a= document.querySelector("h1")
+a.innerHTML= "Suwi"
+```
+
+Changes the content inside `"h1 tag"`
+![h1](./images/h1.png)
+or you can write
+
+```
+document.querySelector("h1").innerHTML=  "Suwi"
+```
+#### 3) Changing CSS
+
+```
+var a= document.querySelector("h1")
+a.style.color= "red"
+a.style.backgroundColor= "black"
+```
+![](css.png)
+![](css2.png)
+#### 4) Event listener
+
+var a= document.querySelector("h1")
+a.addEventListener("click", function(){
+	a.innerHTML= "changed"
+	a.style.color= "red"
+})
 
 ## How JavaScript accesses the DOM
 

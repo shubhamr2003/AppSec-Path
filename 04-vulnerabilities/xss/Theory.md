@@ -20,7 +20,7 @@ The script runs in the security context of the vulnerable website, so it may be 
 |**Stored XSS**|Malicious input is saved by the application—such as in a database—and later delivered to other users.|A comment, profile field, or forum post contains unsafe script content.|
 |**DOM-based XSS**|Client-side JavaScript reads attacker-controlled data and writes it into the page through an unsafe DOM operation. The server response itself may not change.|JavaScript reads a URL fragment and inserts it using an unsafe HTML-rendering method.|
 
-![](xss.png)
+![xss](./images/xss.png)
 
 | Type              | Stored where?            | Requires victim interaction?         | Common location          |
 | ----------------- | ------------------------ | ------------------------------------ | ------------------------ |
