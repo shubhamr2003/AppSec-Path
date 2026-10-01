@@ -129,3 +129,307 @@ Recursive fuzzing helps you:
 Just be mindful of:
 - Program rules on scanning intensity.
 - Noise and WAF triggers from aggressive recursion.
+
+
+## ffuf
+
+ffuf commands you should be familiar with
+## 1. `-mc` — Match Status Codes
+`-mc` means **match HTTP status codes**.
+
+Example:
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-mc 200,301,302,403
+```
+
+This means:
+> Only show results where the server returns `200`, `301`, `302`, or `403`.
+
+For example:
+```text
+/admin       → 403  ✅ show
+/login.php   → 200  ✅ show
+/test        → 404  ❌ don't show
+```
+### When to use it
+Useful when you know which status codes you're interested in.
+
+# 2. `-fc` — Filter Status Codes
+`-fc` is the opposite idea.
+
+It means:
+> **Don't show responses with these status codes.**
+
+Example:
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-fc 404
+```
+
+If ffuf gets:
+```text
+/admin       → 403
+/login       → 200
+/random      → 404
+/test        → 404
+```
+
+It displays:
+```text
+/admin       → 403
+/login       → 200
+```
+and hides the `404`s.
+### Very common usage
+```bash
+-fc 404
+```
+because directory/file fuzzing often generates lots of `404 Not Found` responses.
+
+# 3. `-fs` — Filter by Response Size
+This one is **very important**.
+`-fs` means:
+> Don't show responses having a particular **response size**.
+
+Suppose you fuzz:
+```text
+/admin
+/login
+/random
+/test
+```
+
+and the application responds:
+```text
+/admin      → 404 → 1543 bytes
+/login      → 200 → 4210 bytes
+/random     → 404 → 1543 bytes
+/test       → 404 → 1543 bytes
+```
+
+The `404`s all have the same size:
+```text
+1543
+```
+
+You can filter them:
+```bash
+-fs 1543
+```
+Now ffuf hides those responses.
+This is useful when an application returns a **custom 404 page** with status `200`.
+
+For example:
+```text
+/random       → 200 → 8456 bytes
+/asdfasdf     → 200 → 8456 bytes
+/xyz123       → 200 → 8456 bytes
+/admin        → 200 → 10231 bytes
+```
+Status-code filtering won't help because **everything is 200**.
+
+But:
+```bash
+-fs 8456
+```
+can remove the fake results.
+
+# 4. `-fw` — Filter by Word Count
+`-fw` means:
+> Filter responses based on their **number of words**.
+
+Example:
+```text
+/random → 200 → 152 words
+/test   → 200 → 152 words
+/admin  → 200 → 194 words
+```
+
+You could use:
+```bash
+-fw 152
+```
+Then ffuf hides the responses containing 152 words.
+This is another way of identifying and filtering **false positives**
+
+# 5. `-fl` — Filter by Line Count
+Similar idea:
+```bash
+-fl 25
+```
+
+means:
+> Hide responses containing exactly 25 lines.
+
+Example:
+```text
+/random → 200 → 25 lines
+/test   → 200 → 25 lines
+/admin  → 200 → 42 lines
+```
+`-fl 25` hides the first two.
+
+# 6. `-e` — Extensions
+This is extremely useful for directory/file discovery.
+
+Suppose your wordlist contains:
+```text
+login
+admin
+config
+```
+
+You can tell ffuf to automatically try extensions:
+```bash
+-e .php,.txt,.bak
+```
+
+So ffuf tries things like:
+```text
+/login
+/login.php
+/login.txt
+/login.bak
+
+/admin
+/admin.php
+/admin.txt
+/admin.bak
+
+/config
+/config.php
+/config.txt
+/config.bak
+```
+
+For a PHP application such as DVWA:
+```bash
+-e .php,.txt,.bak
+```
+can be useful.
+
+# 7. `-t` — Threads
+You already saw:
+```bash
+-t 40
+```
+This means **40 concurrent requests**.
+
+Example:
+```bash
+-t 10
+```
+→ slower, lighter
+
+```bash
+-t 40
+```
+→ faster, more concurrent requests
+
+```bash
+-t 100
+```
+→ significantly more aggressive
+
+# 8. `-r` — Follow Redirects
+You currently have:
+```text
+Follow redirects : false
+```
+
+You can enable it:
+```bash
+-r
+```
+
+Example:
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-r
+```
+
+If:
+```text
+/admin → 302 → /login.php
+```
+ffuf follows the redirect.
+
+# 9. `-v` — Verbose
+```bash
+-v
+```
+gives you more information about results.
+
+Example:
+```bash
+ffuf ... -v
+```
+Useful while you're learning because you can see more details about the discovered URLs.
+
+# 10. `-o` — Save Results
+You can save your scan:
+```bash
+-o results.json
+```
+
+and specify the format:
+```bash
+-of json
+```
+
+Example:
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-o results.json \
+-of json
+```
+Other formats include HTML, CSV, etc.
+
+For your current **web pentesting learning**, focus on these:
+
+```text
+-u     Target URL
+-w     Wordlist
+-FUZZ  Fuzzing position
+-mc    Match status
+-fc    Filter status
+-fs    Filter response size
+-fw    Filter word count
+-fl    Filter line count
+-e     Extensions
+-t     Threads
+-r     Follow redirects
+-o     Output
+```
+
+## A realistic DVWA example
+
+Start simple:
+
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-mc 200,301,302,403
+```
+
+Then if you're getting tons of `404`s:
+
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-fc 404
+```
+
+For PHP files:
+
+```bash
+ffuf -u http://192.168.189.130/dvwa/FUZZ \
+-w /home/kali/big.txt \
+-e .php,.txt,.bak \
+-fc 404
+```
