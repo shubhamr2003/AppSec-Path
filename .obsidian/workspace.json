@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05-portswigger/authentication/Lab 2.md",
+                "file": "05-portswigger/authentication/Lab 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 2"
+              "title": "Lab 3"
             }
           }
         ]
@@ -190,8 +190,9 @@
   },
   "active": "4421f54007e924f5",
   "lastOpenFiles": [
-    "05-portswigger/authentication/Lab 1.md",
     "05-portswigger/authentication/Lab 2.md",
+    "05-portswigger/authentication/Lab 3.md",
+    "05-portswigger/authentication/Lab 1.md",
     "05-portswigger/authentication/images/solved.png",
     "05-portswigger/authentication/images/pwd.png",
     "05-portswigger/authentication/images/usr-anamoly.png",
@@ -231,7 +232,6 @@
     "02-reconnaissance/kali tools",
     "02-reconnaissance/endpoint-discovery.md",
     "02-reconnaissance/images",
-    "02-reconnaissance/website-cloning.md",
     "05-portswigger/xss/images",
     "05-portswigger/information-disclosure/images",
     "05-portswigger/information-disclosure",
